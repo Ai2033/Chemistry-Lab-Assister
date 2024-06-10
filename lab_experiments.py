@@ -12,7 +12,7 @@ import random
 from termcolor import colored
 
 
-def input_readings(dict,diff=0.5,range_=20):
+def input_readings(dict,diff=0.5,range_=25):
     '''A function to input the readings for the lab experiments'''
 
     v=0.0
@@ -87,9 +87,9 @@ def navigate(d,output):
 
 # MAIN
 
-d={}
-
 while True:
+    d={}
+    
     os.system('clear')
     
     txt="Chemistry Lab Experiments \n\n"
@@ -107,13 +107,13 @@ while True:
         
         if a2==list(d2.values())[0][0]:
             #strong acid against strong base
-            #d={0.0:18.24,0.5:17.54,1.0:15.72,1.5:14.56,2.0:13.31,2.5:11.98,3.0:10.89,3.5:9.35,4.0:8.07,4.5:6.56,5.0:6.43,5.5:7.10,6.0:8.27,6.5:9.16,7.0:10.08}
+            d={0.0:18.24,0.5:17.54,1.0:15.72,1.5:14.56,2.0:13.31,2.5:11.98,3.0:10.89,3.5:9.35,4.0:8.07,4.5:6.56,5.0:6.43,5.5:7.10,6.0:8.27,6.5:9.16,7.0:10.08}
 
             txt="Conductometric Titration of strong acid against strong base \n\n"
             print(colored(txt.center(163),color="magenta",attrs=["bold"]))
             
-            print("Enter the conductance value for the given Volume of NaOH :\n")
-            input_readings(d)
+            #print("Enter the conductance value for the given Volume of NaOH :\n")
+            #input_readings(d)
 
 
             print("\n\nPress any key to view the observation table")
@@ -162,13 +162,13 @@ while True:
             
         elif a2==list(d2.values())[0][1]:
             # Weak acid against strong base
-            #d={0.0:0.8,0.5:1.3,1.0:1.8,1.5:2.4,2.0:2.9,2.5:3.3,3.0:3.8,3.5:4.3,4.0:4.7,4.5:5.2,5.0:6.3,5.5:7.6,6.0:8.9,6.5:10,7.0:11.2,7.5:12.3,8.0:13.3,8.5:14.5,9.0:15.6,9.5:16.6,10.0:17.6}
+            d={0.0:0.5,0.5:1.2,1.0:1.9,1.5:2.6,2.0:3.3,2.5:3.9,3.0:4.7,3.5:5.3,4.0:5.9,4.5:6.4,5.0:7.5,5.5:9.4,6.0:11.1,6.5:12.7,7.0:14.3,7.5:15.9,8.0:17.5,8.5:19.0}
 
             txt="Conductometric Titration of weak acid against strong base \n\n"
             print(colored(txt.center(163),color="magenta",attrs=["bold"]))
             
-            print("Enter the conductance value for the given Volume of NaOH : \n")
-            input_readings(d)
+            #print("Enter the conductance value for the given Volume of NaOH : \n")
+            #input_readings(d)
 
 
             print("\n\nPress any key to view the observation table")
@@ -222,12 +222,12 @@ while True:
             
         else:  
             #Mixture of strong acid and weak acid against strong base
-            #d={0.0:13.26,0.5:11.32,1.0:9.51,1.5:7.53,2.0:5.29,2.5:4.25,3.0:4.44,3.5:4.84,4.0:5.26,4.5:5.66,5.0:6.00,5.5:6.38,6.0:6.76,6.5:7.13,7.0:7.47,7.5:7.81,8.0:8.14,8.5:8.86,9.0:9.93,9.5:11.10,10.0:12.05}
+            d={0.0:13.26,0.5:11.32,1.0:9.51,1.5:7.53,2.0:5.29,2.5:4.25,3.0:4.44,3.5:4.84,4.0:5.26,4.5:5.66,5.0:6.00,5.5:6.38,6.0:6.76,6.5:7.13,7.0:7.47,7.5:7.81,8.0:8.14,8.5:8.86,9.0:9.93,9.5:11.10,10.0:12.05}
             txt="Conductometric Titration of Mixture of strong acid and weak acid against strong base \n\n"
             print(colored(txt.center(163),color="magenta",attrs=["bold"]))
             
-            print("Enter the conductance value for the given Volume of NaOH :\n")
-            input_readings(d)
+            #print("Enter the conductance value for the given Volume of NaOH :\n")
+            #input_readings(d)
 
 
             print("\n\nPress any key to view the observation table")
@@ -291,14 +291,14 @@ while True:
         
         if a3==list(d3.values())[0][0]:
             #Determination of pKa
-            #d = {0.0:2.74,0.5:3.71,1.0:4.08,1.5:4.34,2.0:4.53,2.5:4.72,3.0:4.91,3.5:5.09,4.0:5.34,4.5:5.64,5.0:6.20,5.5:10.83,6.0:12.83,6.5:13.16,7.0:13.32,7.5:13.43}
+            d = {0.0:2.74,0.5:3.71,1.0:4.08,1.5:4.34,2.0:4.53,2.5:4.72,3.0:4.91,3.5:5.09,4.0:5.34,4.5:5.64,5.0:6.20,5.5:10.83,6.0:12.83,6.5:13.16,7.0:13.32,7.5:13.43}
 
 
             txt="Determination of pKa \n\n"
             print(colored(txt.center(163),color="magenta",attrs=["bold"]))
 
-            print("Enter the ph value for the the given volume of NaOH added :\n")
-            input_readings(d)
+            #print("Enter the ph value for the the given volume of NaOH added :\n")
+            #input_readings(d)
 
             print("\n\nPress any key to view the observation table")
             c=input(">")
@@ -363,13 +363,13 @@ while True:
         else:
             #Mohr's salt
             
-            #d={0:226,0.5:269,1.0:289,1.5:302,2.0:313,2.5:323,3.0:332,3.5:342,4.0:355,4.5:372,5.0:402,5.5:832,6.0:837,6.5:840,7.0:843,7.5:846,8.0:848}
+            d={0:226,0.5:269,1.0:289,1.5:302,2.0:313,2.5:323,3.0:332,3.5:342,4.0:355,4.5:372,5.0:402,5.5:832,6.0:837,6.5:840,7.0:843,7.5:846,8.0:848}
             
             txt="Potentiometric Titration of FAS against Mohr's salt \n\n"
             print(colored(txt.center(163),color="magenta",attrs=["bold"]))
             
-            print("Enter the potential for the the given volume of K2Cr2O7 added :\n")
-            input_readings(d)
+            #print("Enter the potential for the the given volume of K2Cr2O7 added :\n")
+            #input_readings(d)
 
             print("\n\nPress any key to view the observation table")
             c=input(">")
